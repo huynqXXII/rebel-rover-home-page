@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebel - Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="output.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            content: ["./src/**/*.{html,js}"],
+            theme: {
+                extend: {},
+                fontFamily: {},
+                colors: {
+                    transparent: "transparent",
+                    current: "currentColor",
+                    nav: "rgba(18, 11, 11, 0.51)",
+                    white: "#ffffff",
+                    black: "#000000",
+                    "white-blur": "rgba(255, 255, 255, 0.8)",
+                    "white-blur-2": "#cfcfcf",
+                    "gray-blur": "#9B9B9B",
+                },
+                backgroundImage: {
+                    header: "url('../images/header-bg.jpg')",
+                    "why-choose-us": "url('../images/why-choose/why-choose-bg.png')",
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: "Poppins", sans-serif;
+                 font-size: 16px;
+            }
+        }
+
+@layer components {
+    .layout-container {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+header {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-origin: padding-box;
+}
+
+.header-form select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    background-image: url("../images/down-arrow.svg");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: center;
+    padding-left: 26px;
+    padding-right: 26px;
+    outline: none;
+}
+
+.shadow-slider-icon {
+    box-shadow: 0px 8px 50px rgba(0, 0, 0, 0.10);
+}
+
+.shadow-quote-icon {
+    box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.14);
+}
+
+.shadow-slider-item {
+    box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.10);
+}
+
+.slider-item:hover .slider-body {
+    display: block;
+}
+
+.shadow-client-item {
+    box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.10);
+}
+    </style>
+</head>
+
+<body>
+    <div class="max-w-[1520px] mx-auto">
+        <!-- 1. HEADER -->
+        <header class="bg-header pb-28">
+            <!-- HEADER TOP -->
+            <div class="sticky left-0 top-0 right-0 header-top-wrap py-7 bg-nav">
+                <div class="layout-container">
+                    <!-- HEADER NAVIGATION -->
+                    <div class="flex items-center">
+                        <a class="mr-28" href="#">
+                            <img src="../images/logo.png" alt="">
+                        </a>
+                        <ul class="flex items-center gap-x-[67px] text-[18px] font-semibold">
+                            <li>
+                                <a class="text-white-blur" href="#">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-white-blur" href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a class="flex items-center text-white-blur" href="#">
+                                    Package
+                                    <img class="ml-1" src="../images/down-arrow.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center text-white-blur" href="#">
+                                    Destination
+                                    <img class="ml-1" src="../images/down-arrow.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center text-white-blur" href="#">
+                                    Blog
+                                    <img class="ml-1" src="../images/down-arrow.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-white-blur" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <button class="ml-[47px]">
+                            <img class="ml-1" src="../images/search-icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HEADER BODY -->
+            <div class="layout-container">
+                <h1 class="text-[90px] text-white font-bold max-w-[614px] leading-[110px] mt-64">Make in your journey.
+                </h1>
+
+                <p class="text-white-blur-2 text-[18px] leading-9 max-w-[440px] mt-[38px]">
+                    Explore the world with what you love beautiful natural beauty.
+                </p>
+
+                <form
+                    class="py-2.5 px-2 header-form bg-white flex items-center font-semibold text-[18px] rounded-[72px] max-w-max"
+                    action="">
+                    <select class="py-3 mr-[88px] text-gray-blur">
+                        <option class="text-gray-blur" value="" disabled selected hidden>
+                            Location <i class="fa-solid fa-chevron-down"></i>
+                        </option>
+                    </select>
+
+                    <select class="py-3 mr-[88px] text-gray-blur">
+                        <option class="text-gray-blur" value="" disabled selected hidden>
+                            Date
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </option>
+                    </select>
+
+                    <select class="py-3 mr-[102px] text-gray-blur">
+                        <option class="text-gray-blur" value="" disabled selected hidden>
+                            People
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </option>
+                    </select>
+
+                    <button class="py-3 px-[26px] bg-black text-white rounded-[28px] font-semibold text-[18px]">
+                        Explore now
+                    </button>
+                </form>
+
+                <p class="text-lg font-medium text-white leading-9 mt-9"><span
+                        class="font-semibold text-[#ECECEC]">Popular
+                        Place
+                        :</span> Bali, Istanbul, Rome,
+                    Paris.</p>
+            </div>
+
+        </header>
+        <main>
+            <!-- 2. DESTINATION -->
+            <section>
+                <div class="layout-container">
+                    <!-- !!! SECTION HEADING -->
+                    <h2
+                        class="text-center text-black text-6xl font-semibold mt-[88px] max-w-[740px] mx-auto leading-[70px]">
+                        Explore new worlds with
+                        exotic natural scenery
+                    </h2>
+
+                    <!-- !!! SECTION DESCRIPTION -->
+                    <h3 class="text-center text-[#878787] text-lg leading-9 font-medium mx-auto mt-[30px]">
+                        Explore the world with what you love beautiful natural beauty.
+                    </h3>
+
+                    <div class="relative flex items-center justify-between mt-24">
+                        <button
+                            class="absolute left-0 -top-[106px] flex justify-center items-center bg-white w-[70px] h-[70px] rounded-[10px] border-[#e8e8e8] shadow-slider-icon">
+                            <img src="../images/left-arrow.png" alt="">
+                        </button>
+                        <button
+                            class="absolute right-0 -top-[106px] flex justify-center items-center bg-white w-[70px] h-[70px] rounded-[10px] border-[#e8e8e8] shadow-slider-icon">
+                            <img src="../images/right-arrow.png" alt="">
+                        </button>
+
+                        <div class="slider-item rounded-xl max-w-[444px]">
+                            <img src="../images/sliders/slide1.jpg" alt="">
+                            <div
+                                class="slider-body relative bg-white px-4 pt-[34px] pb-[26px] shadow-slider-item hidden">
+                                <div
+                                    class="shadow-quote-icon absolute right-[30px] -top-[18px] w-20 h-20 rounded-full flex items-center justify-center bg-white">
+                                    <img src="../images/sliders/double-quote-icon.png" alt="">
+                                </div>
+                                <h4 class="text-black text-2xl font-semibold">Bali, Indonesia.</h4>
+                                <p class="text-[#555] text-sm font-medium">Bali is a beautiful tourist spot and is
+                                    visited by many travelers.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slider-item rounded-xl max-w-[444px]">
+                            <img src="../images/sliders/slide1.jpg" alt="">
+                            <div
+                                class="slider-body relative bg-white px-4 pt-[34px] pb-[26px] shadow-slider-item hidden">
+                                <div
+                                    class="shadow-quote-icon absolute right-[30px] -top-[18px] w-20 h-20 rounded-full flex items-center justify-center bg-white">
+                                    <img src="../images/sliders/double-quote-icon.png" alt="">
+                                </div>
+                                <h4 class="text-black text-2xl font-semibold">Bali, Indonesia.</h4>
+                                <p class="text-[#555] text-sm font-medium">Bali is a beautiful tourist spot and is
+                                    visited by many travelers.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slider-item rounded-xl max-w-[444px]">
+                            <img src="../images/sliders/slide1.jpg" alt="">
+                            <div
+                                class="slider-body relative bg-white px-4 pt-[34px] pb-[26px] shadow-slider-item hidden">
+                                <div
+                                    class="shadow-quote-icon absolute right-[30px] -top-[18px] w-20 h-20 rounded-full flex items-center justify-center bg-white">
+                                    <img src="../images/sliders/double-quote-icon.png" alt="">
+                                </div>
+                                <h4 class="text-black text-2xl font-semibold">Bali, Indonesia.</h4>
+                                <p class="text-[#555] text-sm font-medium">Bali is a beautiful tourist spot and is
+                                    visited by many travelers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. WHY CHOOSE US -->
+            <section class="relative bg-why-choose-us pt-14 mt-[88px]">
+                <div class="layout-container">
+                    <h2
+                        class="text-center text-white text-6xl font-semibold mt-[88px] max-w-[740px] mx-auto leading-[70px]">
+                        Why choose Us?
+                    </h2>
+
+                    <!-- !!! SECTION DESCRIPTION -->
+                    <h3 class="text-center text-white text-lg leading-9 font-medium mx-auto mt-[30px]">
+                        our services have been trusted by world travelers.
+                    </h3>
+
+                    <div class="px-[120px] relative -bottom-32 flex items-center justify-between mt-24">
+                        <button
+                            class="absolute left-0 -top-[106px] flex justify-center items-center bg-white w-[70px] h-[70px] rounded-[10px] border-[#e8e8e8] shadow-slider-icon">
+                            <img src="../images/left-arrow.png" alt="">
+                        </button>
+                        <button
+                            class="absolute right-0 -top-[106px] flex justify-center items-center bg-white w-[70px] h-[70px] rounded-[10px] border-[#e8e8e8] shadow-slider-icon">
+                            <img src="../images/right-arrow.png" alt="">
+                        </button>
+
+                        <div class="pt-11 px-5 pb-[70px] rounded-xl max-w-[330px] bg-white shadow-slider-item">
+                            <img class="mb-8" src="../images/why-choose/why-choose-icon-1.png" alt="">
+                            <div>
+                                <h4 class="text-black text-2xl font-semibold mb-3">Best Services</h4>
+                                <p class="text-[#858585] text-[18px] font-medium mb-9">our service is reliable and
+                                    convenient,
+                                    our
+                                    service is quality.
+                                </p>
+                                <a href="#" class="text-[18px] text-black font-medium">
+                                    Learn more
+                                    <img src="../images/right-arrow-black.png" alt=""
+                                        class="inline-block hover:translate-x-2 transition-transform duration-75 ease-in-out">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="pt-11 px-5 pb-[70px] rounded-xl max-w-[330px] bg-white shadow-slider-item">
+                            <img class="mb-8" src="../images/why-choose/why-choose-icon-2.png" alt="">
+                            <div>
+                                <h4 class="text-black text-2xl font-semibold mb-3">Price Guarantee</h4>
+                                <p class="text-[#858585] text-[18px] font-medium mb-9">our service is reliable and
+                                    convenient,
+                                    our
+                                    service is quality.
+                                </p>
+                                <a href="#" class="text-[18px] text-black font-medium">
+                                    Learn more
+                                    <img src="../images/right-arrow-black.png" alt=""
+                                        class="inline-block hover:translate-x-2 transition-transform duration-75 ease-in-out">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="pt-11 px-5 pb-[70px] rounded-xl max-w-[330px] bg-white shadow-slider-item">
+                            <img class="mb-8" src="../images/why-choose/why-choose-icon-3.png" alt="">
+                            <div>
+                                <h4 class="text-black text-2xl font-semibold mb-3">Handpicked Hotels</h4>
+                                <p class="text-[#858585] text-[18px] font-medium mb-9">our service is reliable and
+                                    convenient,
+                                    our
+                                    service is quality.
+                                </p>
+                                <a href="#" class="text-[18px] text-black font-medium">
+                                    Learn more
+                                    <img src="../images/right-arrow-black.png" alt=""
+                                        class="inline-block hover:translate-x-2 transition-transform duration-75 ease-in-out">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. PARTNER -->
+            <section>
+                <div class="layout-container">
+                    <h2
+                        class="text-center text-black text-6xl font-semibold mt-[260px] max-w-[740px] mx-auto leading-[70px]">
+                        Our tour partner
+                    </h2>
+
+                    <h3
+                        class="max-w-[630px] text-center text-[#878787] text-lg leading-9 font-medium mx-auto mt-[30px]">
+                        There are many variation of passage of lorem ipsum available but the majority have suffered
+                        alteration
+                    </h3>
+
+                    <ul class="mt-16 px-[120px] flex justify-between items-center">
+                        <li>
+                            <a href="">
+                                <img src="../images/partners/partner1.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/partners/partner2.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/partners/partner3.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/partners/partner4.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../images/partners/partner5.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. TESTIMONIAL -->
+            <section class="mt-[133px]">
+                <div class="layout-container">
+                    <p class="text-3xl font-medium text-[#626262] tracking-[4.2px]">TESTIMONIAL</p>
+                    <h2 class="mt-2 text-black text-6xl font-semibold leading-[70px]">
+                        What our client say
+                    </h2>
+
+                    <h3 class="max-w-[444px] text-[#878787] text-lg leading-9 font-medium mt-[24px]">
+                        Create a visual identity for your company and a overall brand
+                    </h3>
+
+                    <button
+                        class="absolute left-0 -top-[106px] flex justify-center items-center bg-white w-[70px] h-[70px] rounded-[10px] border-[#e8e8e8] shadow-slider-icon">
+                        <img src="../images/left-arrow.png" alt="">
+                    </button>
+                    <button
+                        class="absolute left-0 -top-[106px] flex justify-center items-center bg-white w-[70px] h-[70px] rounded-[10px] border-[#e8e8e8] shadow-slider-icon">
+                        <img src="../images/right-arrow.png" alt="">
+                    </button>
+                    <div class="flex justify-between flex-nowrap mt-44">
+                        <div
+                            class="rounded-[10px] shadow-client-item relative text-center max-w-[400px] px-[54px] pb-[50px]">
+                            <img class="absolute left-2/4 -translate-x-1/2 -translate-y-1/2"
+                                src="../images/clients/1.jpg" alt="">
+                            <p class="text-2xl font-semibold mt-[84px]">Sara Jay</p>
+                            <span class="text-lg font-medium text-[#858585]">Traveller</span>
+                            <ul class="mt-14 flex ">
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                            </ul>
+                            <p class="mt-5 text-lg text-[#858585] font-medium text-left">
+                                Before we define any approach, we need to deline the brands overall goal. We then need
+                                to
+                                dive.
+                            </p>
+                        </div>
+                        <div
+                            class="rounded-[10px] shadow-client-item relative text-center max-w-[400px] px-[54px] pb-[50px]">
+                            <img class="absolute left-2/4 -translate-x-1/2 -translate-y-1/2"
+                                src="../images/clients/2.jpg" alt="">
+                            <p class="text-2xl font-semibold mt-[84px]">Cristian Daniel</p>
+                            <span class="text-lg font-medium text-[#858585]">Traveller</span>
+                            <ul class="mt-14 flex ">
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                            </ul>
+                            <p class="mt-5 text-lg text-[#858585] font-medium text-left">
+                                Before we define any approach, we need to deline the brands overall goal. We then need
+                                to
+                                dive.
+                            </p>
+                        </div>
+                        <div
+                            class="rounded-[10px] shadow-client-item relative text-center max-w-[400px] px-[54px] pb-[50px]">
+                            <img class="absolute left-2/4 -translate-x-1/2 -translate-y-1/2"
+                                src="../images/clients/3.jpg" alt="">
+                            <p class="text-2xl font-semibold mt-[84px]">Kausar Hasan</p>
+                            <span class="text-lg font-medium text-[#858585]">Traveller</span>
+                            <ul class="mt-14 flex ">
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                            </ul>
+                            <p class="mt-5 text-lg text-[#858585] font-medium text-left">
+                                Before we define any approach, we need to deline the brands overall goal. We then need
+                                to
+                                dive.
+                            </p>
+                        </div>
+                        <div
+                            class="rounded-[10px] shadow-client-item relative text-center max-w-[400px] px-[54px] pb-[50px]">
+                            <img class="absolute left-2/4 -translate-x-1/2 -translate-y-1/2"
+                                src="../images/clients/1.jpg" alt="">
+                            <p class="text-2xl font-semibold mt-[84px]">Sara Jay</p>
+                            <span class="text-lg font-medium text-[#858585]">Traveller</span>
+                            <ul class="mt-14 flex ">
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                                <li class="mr-2"><img src="../images/clients/Star.png" alt=""></li>
+                            </ul>
+                            <p class="mt-5 text-lg text-[#858585] font-medium text-left">
+                                Before we define any approach, we need to deline the brands overall goal. We then need
+                                to
+                                dive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

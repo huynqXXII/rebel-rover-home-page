@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+    }
+}
+
+@layer components {
+    .layout-container {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+header {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-origin: padding-box;
+}
+
+.header-form select {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    background: transparent;
+    background-image: url("../images/down-arrow.svg");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: center;
+    padding-left: 26px;
+    padding-right: 26px;
+    outline: none;
+}
+
+.shadow-slider-icon {
+    box-shadow: 0px 8px 50px rgba(0, 0, 0, 0.10);
+}
+
+.shadow-quote-icon {
+    box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.14);
+}
+
+.shadow-slider-item {
+    box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.10);
+}
+
+.slider-item:hover .slider-body {
+    display: block;
+}
+
+.shadow-client-item {
+    box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.10);
+}
